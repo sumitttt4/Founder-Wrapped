@@ -14,9 +14,9 @@ function Initials({ name, size = "sm" }: { name: string; size?: "sm" | "md" }) {
 
 /* ---------- data ---------- */
 const storyExamples = [
-  { title: "Hit product-market fit after 8 months.", tag: "Top story", name: "Ben Hale", product: "Shipfast", hearts: 48, comments: 12 },
-  { title: "From zero to $10k MRR.", tag: "Revenue", name: "Maya Patel", product: "Flowly", hearts: 63, comments: 19 },
-  { title: "3 lessons from a failed onboarding test.", tag: "Lesson", name: "Lena Müller", product: "BuilderOS", hearts: 37, comments: 8 },
+  { title: "Hit product-market fit after 8 months.", tag: "Top story", name: "Ben Hale", product: "Glyph", hearts: 48, comments: 12 },
+  { title: "From zero to $10k MRR.", tag: "Revenue", name: "Maya Patel", product: "Glyph", hearts: 63, comments: 19 },
+  { title: "3 lessons from a failed onboarding test.", tag: "Lesson", name: "Lena Müller", product: "Glyph", hearts: 37, comments: 8 },
 ];
 
 const steps = [
@@ -104,7 +104,7 @@ export default function Home() {
 
           {/* C. Launch recap card */}
           <div className="absolute -left-2 bottom-16 z-20 w-56 -rotate-2 rounded-[22px] bg-gradient-to-br from-[#E7FBC0] to-[#C7F36B] p-5 shadow-lg sm:left-0 lg:-left-4">
-            <p className="heading text-xl font-bold text-[#1A2E00]">Launch Recap: Luna 2.0 is live!</p>
+            <p className="heading text-xl font-bold text-[#1A2E00]">Launch Recap: Glyph 2.0 is live!</p>
             <p className="mt-2 text-sm font-medium text-[#3F6B00]">Read the recap →</p>
           </div>
 
@@ -220,15 +220,15 @@ export default function Home() {
             <span className="inline-block rounded-full bg-white/20 px-3 py-1 text-xs font-semibold">Revenue Milestone</span>
             <p className="heading mt-4 text-4xl font-bold">$12,540</p>
             <p className="heading mt-1 text-xl">earned in March</p>
-            <p className="absolute bottom-5 left-7 text-xs opacity-70">Luna · founderwrapped.com</p>
+            <p className="absolute bottom-5 left-7 text-xs opacity-70">Glyph · founderwrapped.com</p>
           </div>
           {/* Lime launch card */}
           <div className="relative overflow-hidden rounded-[24px] bg-gradient-to-br from-[#E7FBC0] to-[#C7F36B] p-7 shadow-lg" style={{ aspectRatio: "1200/630" }}>
             <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-[#3F6B00]/5" />
             <span className="inline-block rounded-full bg-[#3F6B00]/10 px-3 py-1 text-xs font-semibold text-[#3F6B00]">Launch Recap</span>
-            <p className="heading mt-4 text-4xl font-bold text-[#1A2E00]">Luna 2.0</p>
+            <p className="heading mt-4 text-4xl font-bold text-[#1A2E00]">Glyph 2.0</p>
             <p className="heading mt-1 text-xl text-[#3F6B00]">is live!</p>
-            <p className="absolute bottom-5 left-7 text-xs text-[#3F6B00]/60">Luna · founderwrapped.com</p>
+            <p className="absolute bottom-5 left-7 text-xs text-[#3F6B00]/60">Glyph · founderwrapped.com</p>
           </div>
           {/* Cream lesson card */}
           <div className="relative overflow-hidden rounded-[24px] bg-gradient-to-br from-[#FFF6E9] to-[#FFF0E8] p-7 shadow-lg" style={{ aspectRatio: "1200/630" }}>
@@ -236,7 +236,7 @@ export default function Home() {
             <span className="inline-block rounded-full bg-brand-primary/10 px-3 py-1 text-xs font-semibold text-brand-primaryDark">Lessons Learned</span>
             <p className="heading mt-4 text-4xl font-bold text-brand-text">From zero</p>
             <p className="heading mt-1 text-xl text-brand-textSoft">to $10k MRR</p>
-            <p className="absolute bottom-5 left-7 text-xs text-brand-muted">Flowly · founderwrapped.com</p>
+            <p className="absolute bottom-5 left-7 text-xs text-brand-muted">Glyph · founderwrapped.com</p>
           </div>
         </div>
       </section>

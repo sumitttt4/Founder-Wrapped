@@ -31,12 +31,12 @@ export function seedSampleStories(): void {
   if (typeof window === "undefined") return;
   if (readStories().length) return;
   const base: FounderStory[] = [
-    ["Alex Chen","Solo founder","Luna","$10k MRR","2,843","2","Product Hunt","Ship weekly, learn daily."],
-    ["Sofia Garcia","Maker of Flowly","Flowly","$18.2k ARR","3,100","6","X / Twitter","Niche wins over broad."],
-    ["Maya Patel","Indie maker","PingPilot","$4.2k MRR","1,120","3","Reddit","Keep onboarding simple."],
-    ["Tom Alvarez","Bootstrap founder","Byteboard","$7.5k MRR","2,010","1","Newsletter","Consistency compounds."],
-    ["Lena Müller","SaaS founder","Loopdesk","$2.8k MRR","980","2","LinkedIn","Talk to users weekly."],
-    ["Noah Reed","AI tool builder","DraftMate","$5.1k MRR","1,440","4","YouTube","Show, don't tell."],
+    ["Alex Chen","Solo founder","Glyph","$10k MRR","2,843","2","Product Hunt","Ship weekly, learn daily."],
+    ["Sofia Garcia","Maker of Glyph","Glyph","$18.2k ARR","3,100","6","X / Twitter","Niche wins over broad."],
+    ["Maya Patel","Indie maker","Glyph","$4.2k MRR","1,120","3","Reddit","Keep onboarding simple."],
+    ["Tom Alvarez","Bootstrap founder","Glyph","$7.5k MRR","2,010","1","Newsletter","Consistency compounds."],
+    ["Lena Müller","SaaS founder","Glyph","$2.8k MRR","980","2","LinkedIn","Talk to users weekly."],
+    ["Noah Reed","AI tool builder","Glyph","$5.1k MRR","1,440","4","YouTube","Show, don't tell."],
   ].map((x, i) => ({
     id: `sample-${i + 1}`,
     founderName: x[0], founderRole: x[1], productName: x[2], productUrl: "https://example.com",
