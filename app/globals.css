@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --fw-primary: #FF5A1F;
+  --fw-primary-dark: #E14D16;
+  --fw-primary-soft: #FFF0E8;
+  --fw-bg: #FCFAF7;
+  --fw-surface: #FFFFFF;
+  --fw-surface-alt: #F6F1EB;
+  --fw-text: #171311;
+  --fw-text-soft: #4F4742;
+  --fw-muted: #8A7F77;
+  --fw-border: #E7DED6;
+  --fw-gold: #FFB84D;
+  --fw-lime: #C7F36B;
+}
+
+body {
+  background: var(--fw-bg);
+  color: var(--fw-text);
+  font-family: var(--font-inter), sans-serif;
+}
+
+.heading { font-family: var(--font-space), sans-serif; }
+
+.fw-section { @apply mx-auto max-w-6xl px-6 py-14; }
+.fw-card { @apply rounded-[20px] border border-brand-border bg-brand-surface p-6 shadow-[0_10px_30px_rgba(23,19,17,0.05)] transition-all duration-200 ease-out hover:-translate-y-0.5 hover:border-[#ff5a1f4d] hover:shadow-[0_16px_40px_rgba(23,19,17,0.08)]; }
+.fw-button-primary { @apply inline-flex items-center justify-center rounded-2xl bg-brand-primary px-5 py-3 font-semibold text-white transition-all duration-200 ease-out hover:-translate-y-0.5 hover:bg-brand-primaryDark active:translate-y-0; box-shadow: 0 8px 20px rgba(255,90,31,0.18); }
+.fw-button-secondary { @apply inline-flex items-center justify-center rounded-2xl border border-brand-border bg-white px-5 py-3 font-semibold text-brand-text transition-all duration-200 ease-out hover:bg-brand-primarySoft; }
+.fw-button-ghost { @apply inline-flex items-center justify-center rounded-xl px-4 py-2 text-brand-textSoft transition-all duration-200 ease-out hover:bg-brand-surfaceAlt; }
+.fw-link { @apply text-brand-primary transition-all duration-200 ease-out hover:text-brand-primaryDark; }
+.fw-badge { @apply inline-flex items-center rounded-full border px-3 py-1 text-xs font-semibold; background: var(--fw-primary-soft); color: var(--fw-primary-dark); border-color: rgba(255,90,31,0.18); }
+.fw-badge-growth { @apply inline-flex items-center rounded-full border px-3 py-1 text-xs font-semibold; background: #c7f36b33; color: #3f6b00; border-color: #a8de49; }
+.fw-badge-featured { @apply inline-flex items-center rounded-full border px-3 py-1 text-xs font-semibold; background: #ffb84d22; color: #9a5a00; border-color: #ffd79f; }
+.fw-input { @apply w-full rounded-xl border border-brand-border bg-white px-4 py-3 text-brand-text placeholder:text-brand-muted outline-none transition-all duration-200 ease-out focus:border-brand-primary focus:ring-4 focus:ring-brand-primarySoft; }
+textarea.fw-input { @apply min-h-[120px] leading-relaxed; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fw-card, .fw-button-primary, .fw-button-secondary, .fw-button-ghost, .fw-link { @apply transition-none; }
+}
