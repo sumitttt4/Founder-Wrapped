@@ -1,16 +1,19 @@
 import Link from "next/link";
+import { LogoIcon } from "@/components/logo";
 
 export function Nav() {
   return (
     <nav className="sticky top-4 z-20 mx-auto mt-6 flex max-w-6xl items-center justify-between rounded-2xl border border-brand-border bg-white/80 p-4 backdrop-blur">
       <Link className="flex items-center gap-3" href="/">
-        <span className="grid h-9 w-9 place-items-center rounded-xl bg-brand-primarySoft text-sm font-bold text-brand-primary">FW</span>
+        <span className="grid h-9 w-9 place-items-center rounded-xl bg-brand-primarySoft text-brand-primary p-1.5">
+          <LogoIcon />
+        </span>
         <span className="heading text-2xl font-bold text-brand-text">FounderWrapped</span>
       </Link>
       <div className="hidden items-center gap-6 text-sm text-brand-muted md:flex">
-        <Link className="hover:text-brand-primary" href="/stories">Stories</Link><a className="hover:text-brand-primary" href="#">Launches</a><a className="hover:text-brand-primary" href="#">Pricing</a><a className="hover:text-brand-primary" href="#">About</a>
+        <Link className="hover:text-brand-primary" href="/stories">Stories</Link>
       </div>
-      <Link href="/create" className="fw-button-primary">Share your story</Link>
+      <Link href="/create" className="hidden sm:inline-flex items-center justify-center rounded-full bg-brand-primary px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-brand-primary/20 transition-all hover:-translate-y-0.5 hover:bg-brand-primaryDark hover:shadow-brand-primary/30">Share your story</Link>
     </nav>
   );
 }

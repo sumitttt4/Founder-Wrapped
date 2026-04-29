@@ -37,10 +37,10 @@ function CopyButton({ text, label }: { text: string; label: string }) {
 
 /* ── Avatar initials ── */
 function Initials({ name }: { name: string }) {
-  const initials = name.split(" ").map((w) => w[0]).join("").slice(0, 2).toUpperCase();
+  const seed = encodeURIComponent(name);
   return (
-    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-primarySoft text-lg font-bold text-brand-primary">
-      {initials}
+    <div className="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-2xl bg-brand-surfaceAlt shadow-sm border border-brand-border">
+      <img src={`https://api.dicebear.com/7.x/notionists/svg?seed=${seed}&backgroundColor=transparent`} alt={name} className="h-full w-full object-cover" />
     </div>
   );
 }
@@ -74,22 +74,25 @@ export default function WrappedPage() {
   /* Empty state */
   if (!story) {
     return (
-      <main>
-        <Nav />
-        <section className="mx-auto mt-20 max-w-lg px-6 text-center">
-          <div className="fw-card py-14">
-            <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-brand-primarySoft">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF5A1F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      <main className="relative min-h-screen bg-isometric">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-brand-bg/95"></div>
+        <div className="relative z-10">
+          <Nav />
+          <section className="mx-auto mt-20 max-w-lg px-6 text-center">
+            <div className="fw-card py-14">
+              <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-brand-primarySoft">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF5A1F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+              </div>
+              <h1 className="heading text-3xl font-bold">Story not found</h1>
+              <p className="mt-2 text-brand-textSoft">
+                This wrapped page doesn&apos;t exist yet. Create your first one!
+              </p>
+              <Link href="/create" className="fw-button-primary mt-6 inline-flex">
+                Create your wrapped
+              </Link>
             </div>
-            <h1 className="heading text-3xl font-bold">Story not found</h1>
-            <p className="mt-2 text-brand-textSoft">
-              This wrapped page doesn&apos;t exist yet. Create your first one!
-            </p>
-            <Link href="/create" className="fw-button-primary mt-6 inline-flex">
-              Create your wrapped
-            </Link>
-          </div>
-        </section>
+          </section>
+        </div>
       </main>
     );
   }

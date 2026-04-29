@@ -3,6 +3,7 @@
 import { toPng } from "html-to-image";
 import { useRef, useState } from "react";
 import type { FounderStory } from "@/lib/types";
+import { LogoIcon } from "@/components/logo";
 
 /* ── Download helper ── */
 function useDownload(ref: React.RefObject<HTMLDivElement | null>, filename: string) {
@@ -185,8 +186,8 @@ export function MonthlyWrappedCard({ story }: { story: FounderStory }) {
               <span style={{ fontSize: "11px", color: "#8A7F77", fontWeight: 500 }}>
                 {story.productName} · founderwrapped.com
               </span>
-              <span style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: "28px", height: "28px", borderRadius: "8px", background: "rgba(255,90,31,0.1)", color: "#E14D16", fontSize: "10px", fontWeight: 700 }}>
-                FW
+              <span style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: "28px", height: "28px", borderRadius: "8px", background: "rgba(255,90,31,0.1)", color: "#E14D16", padding: "6px" }}>
+                <LogoIcon />
               </span>
             </div>
           </div>
@@ -245,8 +246,8 @@ export function LessonCard({ story }: { story: FounderStory }) {
               <span style={{ fontSize: "11px", color: "rgba(63,107,0,0.55)", fontWeight: 500 }}>
                 founderwrapped.com
               </span>
-              <span style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: "28px", height: "28px", borderRadius: "8px", background: "rgba(63,107,0,0.1)", color: "#3F6B00", fontSize: "10px", fontWeight: 700 }}>
-                FW
+              <span style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: "28px", height: "28px", borderRadius: "8px", background: "rgba(63,107,0,0.1)", color: "#3F6B00", padding: "6px" }}>
+                <LogoIcon />
               </span>
             </div>
           </div>
